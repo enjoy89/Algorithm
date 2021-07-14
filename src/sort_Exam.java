@@ -8,6 +8,7 @@ public class sort_Exam {
      * 4. 새롭게 정의된 최소값과 배열의 원소의 크기를 다시 비교함
      * 5. 배열의 마지막 인덱스까지 순회를 완료한 후, 반목문 종료
      * 데이터의 양이 적을 경우에는 좋은 성능이 나타나지만, 데이터의 양이 커질 수록 속도가 급격히 오래걸려 적절한 사용이 어려움
+     *
      * @param arr
      * @return
      */
@@ -33,15 +34,16 @@ public class sort_Exam {
      * 1. 배열의 i 번째 원소와 i+1 번째 원소의 크기를 비교하여 큰 원소를 뒤로 이동시킨다.
      * 2. 맨 끝의 원소는 자동으로 정렬되므로 제외함 (내부의 for loop length - 1까지 탐색)
      * 시간복잡도 O(n^2)
+     *
      * @param arr
      * @return
      */
     public static int[] Bubble_sort(int[] arr) {
         int temp;
 
-        for(int i=0; i<arr.length; i++) {
-            for(int j=0; j<arr.length - 1; j++) {
-                if(arr[j] > arr[j+1]) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
                     temp = arr[j + 1];
                     arr[j + 1] = arr[j];
                     arr[j] = temp;
@@ -58,19 +60,21 @@ public class sort_Exam {
      * 2. 배열 안의 정렬 범위를 한 칸씩 확장해나감
      * 3. 새롭게 정해진 범위에서 위의 과정을 반복함
      * 시간복잡도 O(n^2)
+     *
      * @param arr
      * @return
      */
     public static int[] Insertion_sort(int[] arr) {
         int temp;
 
-        for(int i = 1; i<arr.length; i++) {
+        for (int i = 1; i < arr.length; i++) {
             int key = i;
-            for(int j = i-1; j>=0; j--) {
-                if(arr[key] < arr[j]) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[key] < arr[j]) {
                     temp = arr[key];
                     arr[key] = arr[j];
                     arr[j] = temp;
+                    key = j;
                 }
             }
         }
@@ -90,13 +94,13 @@ public class sort_Exam {
         System.out.print("정렬 전 배열: ");
         printArray(input_arr);
 
-        int[] selectionResult = Selection_sort(input_arr);
-        System.out.printf("Selection sort: ");
-        printArray(selectionResult);
-
-        int[] bubbleResult = Bubble_sort(input_arr);
-        System.out.printf("Bubble sort: ");
-        printArray(bubbleResult);
+//        int[] selectionResult = Selection_sort(input_arr);
+//        System.out.printf("Selection sort: ");
+//        printArray(selectionResult);
+//
+//        int[] bubbleResult = Bubble_sort(input_arr);
+//        System.out.printf("Bubble sort: ");
+//        printArray(bubbleResult);
 
         int[] insertionResult = Insertion_sort(input_arr);
         System.out.printf("Insertion sort: ");
