@@ -94,13 +94,13 @@ public class sort_Exam {
         System.out.print("정렬 전 배열: ");
         printArray(input_arr);
 
-//        int[] selectionResult = Selection_sort(input_arr);
-//        System.out.printf("Selection sort: ");
-//        printArray(selectionResult);
-//
-//        int[] bubbleResult = Bubble_sort(input_arr);
-//        System.out.printf("Bubble sort: ");
-//        printArray(bubbleResult);
+        int[] selectionResult = Selection_sort(input_arr);
+        System.out.printf("Selection sort: ");
+        printArray(selectionResult);
+
+        int[] bubbleResult = Bubble_sort(input_arr);
+        System.out.printf("Bubble sort: ");
+        printArray(bubbleResult);
 
         int[] insertionResult = Insertion_sort(input_arr);
         System.out.printf("Insertion sort: ");
