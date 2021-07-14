@@ -1,4 +1,4 @@
-public class sort_Exam {
+public class Sort_exam {
 
     /**
      * selection sort (선택 정렬)
@@ -82,8 +82,8 @@ public class sort_Exam {
     }
 
     public static void printArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
+        for (int j : array) {
+            System.out.print(j + " ");
         }
         System.out.println();
     }
@@ -95,15 +95,15 @@ public class sort_Exam {
         printArray(input_arr);
 
         int[] selectionResult = Selection_sort(input_arr);
-        System.out.printf("Selection sort: ");
+        System.out.print("Selection sort: ");
         printArray(selectionResult);
 
         int[] bubbleResult = Bubble_sort(input_arr);
-        System.out.printf("Bubble sort: ");
+        System.out.print("Bubble sort: ");
         printArray(bubbleResult);
 
         int[] insertionResult = Insertion_sort(input_arr);
-        System.out.printf("Insertion sort: ");
+        System.out.print("Insertion sort: ");
         printArray(insertionResult);
 
     }

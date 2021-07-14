@@ -8,11 +8,11 @@
  * 정렬하고자 하는 수의 범위가 커질수록 효율이 떨어진다. (메모리 낭비)
  * 시간 복잡도 O(N)
  */
-public class CountingSort {
+public class Counting_Sort {
 
     public static void printArray(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
         System.out.println();
     }
