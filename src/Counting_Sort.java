@@ -48,10 +48,10 @@ public class Counting_Sort {
             result[counting[input_arr[i]]] = value;
         }
 
-        System.out.println("array");    // 정렬 전
+        System.out.println("정렬 전 array");
         printArray(input_arr);
 
-        System.out.println("result");   // 정렬 후
+        System.out.println("정렬 후 result");
         printArray(result);
     }
 }
