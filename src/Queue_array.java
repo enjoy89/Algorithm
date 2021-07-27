@@ -15,10 +15,13 @@ public class Queue_array {
         this.queue = new int[size];
     }
 
+    // 큐에 새로운 데이터를 추가
+    // rear 인덱스를 하나 증가시켜 그 공간에 데이터 삽입
     public void enqueue(int data) {
         queue[++rear] = data;
     }
 
+    // front 인덱스에 위치한 데이터를 삭제
     public void dequeue() {
         if (isEmpty()) {
             return;
