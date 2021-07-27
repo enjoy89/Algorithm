@@ -7,9 +7,9 @@ import java.io.InputStreamReader;
  * top에서만 삽입, 삭제, 읽기가 가능함
  */
 public class Stack_array {
-    private int[] stack;
+    private final int[] stack;
     private int top;    // 가장 최근에 추가한 데이터
-    private int size;
+    private final int size;
 
     public Stack_array(int size) {
         this.size = size;
