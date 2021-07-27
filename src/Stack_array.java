@@ -14,7 +14,7 @@ public class Stack_array {
     public Stack_array(int size) {
         this.size = size;
         this.top = -1;
-        this.stack = new int[size];
+        this.stack = new int[size]; // 초기 공간 할당
     }
 
     // 스택에 데이터 추가
@@ -55,5 +55,26 @@ public class Stack_array {
                 System.out.println(stack[i]);
             }
         }
+    }
+
+    public static void main(String[] args) {
+        Stack_array stack = new Stack_array(5);    // 사이즈가 5인 스택
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        System.out.print("peek: "); // 4
+        stack.peek();
+        System.out.println(stack.isEmpty());
+
+        stack.pop();
+        stack.push(5);
+        stack.push(6);
+        System.out.print("peek: "); // 6
+        stack.peek();
+        System.out.println();
+        stack.print_stack();
+        System.out.println(stack.search(6));    // index 5
+
     }
 }
